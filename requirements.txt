@@ -1,0 +1,9 @@
+# Direct dependencies only. Lower bounds are versions the notebook relies on;
+# upper bounds guard against breaking major releases. Exact tested versions: requirements-lock.txt
+numpy>=2.0,<3
+pandas>=3.0,<4          # pandas 3: astype(str) keeps NaN, which populate_uid relies on
+scikit-learn>=1.4,<2    # RandomForestClassifier handles NaN from 1.4
+xgboost>=2.0,<4
+matplotlib>=3.8,<4
+kagglehub>=1.0,<2
+ipykernel               # to run the notebook in Jupyter / VS Code
